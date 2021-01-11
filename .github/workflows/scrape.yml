@@ -16,7 +16,7 @@ jobs:
       run: sudo apt install tidy
     - name: Fetch latest data
       run: |-
-        curl https://www.gosport.gov.uk/coronavirus | tidy > coronavirus.html
+        curl https://www.gosport.gov.uk/coronavirus | (tidy > coronavirus.html) || exit 0
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
