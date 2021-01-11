@@ -12,9 +12,11 @@ jobs:
     steps:
     - name: Check out this repo
       uses: actions/checkout@v2
+    - name: Install HTML tidy
+      run: sudo apt install tidy
     - name: Fetch latest data
       run: |-
-        curl https://www.gosport.gov.uk/coronavirus > coronavirus.html
+        curl https://www.gosport.gov.uk/coronavirus | tidy > coronavirus.html
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
