@@ -1,7 +1,5 @@
-# ca-fires-history
+# gosport-coronavirus
 
-Tracking fire data from www.fire.ca.gov/incidents
+Tracking Coronavirus updates from gosport.gov.uk/coronavirus
 
-This repo archives the latest version of https://www.fire.ca.gov/umbraco/Api/IncidentApi/GetIncidents every twenty minutes, if it has changed.
-
-Background on this project: [Git scraping: track changes over time by scraping to a Git repository](https://simonwillison.net/2020/Oct/9/git-scraping/)
+With huge thanks to @simonw for inspiration. Background: [Git scraping: track changes over time by scraping to a Git repository](https://simonwillison.net/2020/Oct/9/git-scraping/)
