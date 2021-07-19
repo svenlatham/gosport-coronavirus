@@ -10,6 +10,9 @@
 <meta name="viewport" content=
 "width=device-width, initial-scale=1">
 <script>
+                                window["ga-disable-UA-546293-1"] = true;
+</script>
+<script>
                         (function (gi) {
                                 var load = function () {
                                         delete window["ga-disable-UA-546293-1"];
@@ -80,8 +83,87 @@ class="skip-link">Skip to main content</a></li>
 </ul>
 </section>
 <script>
-                gi.cookiepolicy.init({});
+        gi.cookiepolicy.init({"categories":[{"id":"analytics","providers":["Google Analytics"],"consented":false}]});
 </script>
+<div class="cookie-consent-prompt" role="region" aria-label=
+"Cookie Policy">
+<div id="cookie-consent-prompt">
+<div class="block block--muted block--cookie-consent-prompt">
+<h2 class="block__heading">This website uses cookies</h2>
+<div class="block__summary">
+<p>We use some essential cookies to make this website work.</p>
+<p>We'd also like to use analytics cookies. These cookies tell us
+now you use the website and help us to make improvements.</p>
+</div>
+<div class="block__actions">
+<form id="cookie-consent-form" method="post" action=
+"https://www.gosport.gov.uk/article/1533/Cookie-Policy" name=
+"cookie-consent-form"><button class=
+"btn btn--contrast btn--complete" name="acceptall" value=
+"true"><span class="btn__text">Accept all</span></button> <a href=
+"https://www.gosport.gov.uk/article/1533/Cookie-Policy" class=
+"cta-link cta-link--contrast cta-link--cookie-consent-contrast">Change
+cookie preferences</a></form>
+</div>
+</div>
+</div>
+<div id="cookie-consents-updated" class=
+"cookie-consents-updated-confirmation" role="alert">
+<div class=
+"block block--muted block--cookie-consent-prompt block--cookie-consents-updated-confirmation">
+<p id="cookie-consents-updated-message" class=
+"cookie-consents-updated-confirmation__message">Your cookie
+preferences were saved</p>
+<a href="https://www.gosport.gov.uk/article/1533/Cookie-Policy"
+class="cookie-consents-updated-confirmation__link">Change cookie
+preferences</a></div>
+</div>
+<script>
+                        var ccpcm = document.getElementById('cookie-consents-updated-message');
+                        var hideBtn = document.createElement('button');
+                        hideBtn.appendChild(document.createTextNode("Hide"));
+                        hideBtn.setAttribute('class', 'btn btn--link btn--cookie-consents-updated-confirmation-hide');
+                        hideBtn.onclick = function() {
+                                document.getElementById('cookie-consents-updated').style = 'display: none;';
+                        };
+                        ccpcm.parentNode.appendChild(hideBtn);
+</script> 
+<script>
+
+        document.getElementById('cookie-consent-form').addEventListener('submit', function(event) {
+                if (event.submitter) {
+                        var confMessage = document.getElementById('cookie-consents-updated');
+                        confMessage.style = "";
+
+                        var form = event.target;
+                        var formData = new FormData(form);
+                        formData.append(event.submitter.name, event.submitter.value);
+                        formData.append("async", "true");
+
+                        var xhr = new XMLHttpRequest();
+                        xhr.withCredentials = true;
+                        xhr.onreadystatechange = function () {
+                                if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                                                
+                                                var prompt = document.getElementById('cookie-consent-prompt');
+                                                if (prompt) {
+                                                        prompt.style = "display:none;"
+                                                }
+                                                
+                                        confMessage.style = "display:block;";
+                                        confMessage.scrollIntoView();
+                                        setTimeout(function() {
+                                                gi.cookiepolicy.refreshConsents(form);
+                                        }, 0);
+                                }
+                        }
+                        xhr.open(form.method, form.action);
+                        xhr.send(formData);
+
+                        event.preventDefault();
+                }
+        });
+</script></div>
 <header>
 <div class="mobilebar">
 <div class=
@@ -281,14 +363,14 @@ maxlength="100" autocomplete="off">
 <button id="headersearch-toggle" class=
 "btn btn--search btn--icon-only btn--search-header" tabindex=
 "-1"><span class="btn__text">Search</span></button></div>
-<nav id="c_1158408395601200" aria-label="Site navigation" class=
+<nav id="c_1160136396983700" aria-label="Site navigation" class=
 "gi-sitenav gi-sitenav--toplevel">
 <ul class="gi-sitenav__list gi-sitenav__list--lvl1">
 <li class="gi-sitenav__item gi-sitenav__item--lvl1">
-<a data-subnav_id="subnav-1493482454" href=
+<a data-subnav_id="subnav-919826067" href=
 "https://www.gosport.gov.uk/article/742/Residents" class=
 "gi-sitenav__link gi-sitenav__link--lvl1">Residents</a>
-<div class="gi-sitenav gi-sitenav--lvl2" id="subnav-1493482454"
+<div class="gi-sitenav gi-sitenav--lvl2" id="subnav-919826067"
 style="display:none;" aria-label="Residents" role="region">
 <ul class="gi-sitenav__list gi-sitenav__list--lvl2">
 <li class="gi-sitenav__item gi-sitenav__item--lvl2"><a href=
@@ -485,10 +567,10 @@ sections</a></li>
 </div>
 </li>
 <li class="gi-sitenav__item gi-sitenav__item--lvl1">
-<a data-subnav_id="subnav1154017033" href=
+<a data-subnav_id="subnav1112183771" href=
 "https://www.gosport.gov.uk/article/743/Business" class=
 "gi-sitenav__link gi-sitenav__link--lvl1">Business</a>
-<div class="gi-sitenav gi-sitenav--lvl2" id="subnav1154017033"
+<div class="gi-sitenav gi-sitenav--lvl2" id="subnav1112183771"
 style="display:none;" aria-label="Business" role="region">
 <ul class="gi-sitenav__list gi-sitenav__list--lvl2">
 <li class="gi-sitenav__item gi-sitenav__item--lvl2"><a href=
@@ -614,10 +696,10 @@ sections</a></li>
 </div>
 </li>
 <li class="gi-sitenav__item gi-sitenav__item--lvl1">
-<a data-subnav_id="subnav1943873129" href=
+<a data-subnav_id="subnav1790977331" href=
 "https://www.gosport.gov.uk/article/744/About-the-council" class=
 "gi-sitenav__link gi-sitenav__link--lvl1">About the council</a>
-<div class="gi-sitenav gi-sitenav--lvl2" id="subnav1943873129"
+<div class="gi-sitenav gi-sitenav--lvl2" id="subnav1790977331"
 style="display:none;" aria-label="About the council" role="region">
 <ul class="gi-sitenav__list gi-sitenav__list--lvl2">
 <li class="gi-sitenav__item gi-sitenav__item--lvl2"><a href=
@@ -810,7 +892,7 @@ council sections</a></li>
 </ul>
 </nav>
 <script>
-gi.sitenav.init('c_1158408395601200')
+gi.sitenav.init('c_1160136396983700')
 </script></div>
 </div>
 </div>
@@ -1450,7 +1532,7 @@ Self-isolation Payment Scheme</a></h2>
 </div>
 </div>
 </div>
-<ul class="paging paging--list" id="paging_637623027901191111"
+<ul class="paging paging--list" id="paging_637623045181631854"
 data-previous="Previous" data-next="Next"></ul>
 <div class="a-share">
 <p class="a-share__label">Share this page</p>
